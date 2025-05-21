@@ -1,7 +1,7 @@
-import initContact from "./_contact.js";
-import initHamburgerMenu from "./_hamburger.js";
-import initModals from "./_modals.js";
-import initThemeSwitcher from "./_themeSwitcher.js";
+import initContact from "./contact.js";
+import initHamburgerMenu from "./hamburger.js";
+import initModals from "./modals.js";
+import initThemeSwitcher from "./themeSwitcher.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   initThemeSwitcher();
