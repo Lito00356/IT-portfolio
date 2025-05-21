@@ -5,10 +5,31 @@
   margin: 0 auto;
 }
 
+.project-details {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: 42rem) {
+    max-width: 80%;
+  }
+}
+
 .grid-details__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.grid-details__image-wrapper {
+  margin-bottom: 2rem;
+}
+
+.project-details-title {
+  margin-bottom: 1rem;
+}
+
+.project-details-info {
+  margin-bottom: 1rem;
 }
 
 .grid-details__info {

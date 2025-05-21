@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scripts/_contact.js":
-/*!*********************************!*\
-  !*** ./src/scripts/_contact.js ***!
-  \*********************************/
+/***/ "./src/scripts/contact.js":
+/*!********************************!*\
+  !*** ./src/scripts/contact.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -32,10 +32,10 @@ function initContact() {
 
 /***/ }),
 
-/***/ "./src/scripts/_hamburger.js":
-/*!***********************************!*\
-  !*** ./src/scripts/_hamburger.js ***!
-  \***********************************/
+/***/ "./src/scripts/hamburger.js":
+/*!**********************************!*\
+  !*** ./src/scripts/hamburger.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -59,10 +59,34 @@ function initHamburgerMenu() {
 
 /***/ }),
 
-/***/ "./src/scripts/_modals.js":
-/*!********************************!*\
-  !*** ./src/scripts/_modals.js ***!
-  \********************************/
+/***/ "./src/scripts/main.js":
+/*!*****************************!*\
+  !*** ./src/scripts/main.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.js */ "./src/scripts/contact.js");
+/* harmony import */ var _hamburger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hamburger.js */ "./src/scripts/hamburger.js");
+/* harmony import */ var _modals_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modals.js */ "./src/scripts/modals.js");
+/* harmony import */ var _themeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./themeSwitcher.js */ "./src/scripts/themeSwitcher.js");
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  (0,_themeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_hamburger_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_modals_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_contact_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/scripts/modals.js":
+/*!*******************************!*\
+  !*** ./src/scripts/modals.js ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -89,10 +113,10 @@ function initModals() {
 
 /***/ }),
 
-/***/ "./src/scripts/_themeSwitcher.js":
-/*!***************************************!*\
-  !*** ./src/scripts/_themeSwitcher.js ***!
-  \***************************************/
+/***/ "./src/scripts/themeSwitcher.js":
+/*!**************************************!*\
+  !*** ./src/scripts/themeSwitcher.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -125,30 +149,6 @@ function initThemeSwitcher() {
     toggleDarkMode();
   });
 }
-
-/***/ }),
-
-/***/ "./src/scripts/main.js":
-/*!*****************************!*\
-  !*** ./src/scripts/main.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_contact.js */ "./src/scripts/_contact.js");
-/* harmony import */ var _hamburger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_hamburger.js */ "./src/scripts/_hamburger.js");
-/* harmony import */ var _modals_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_modals.js */ "./src/scripts/_modals.js");
-/* harmony import */ var _themeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_themeSwitcher.js */ "./src/scripts/_themeSwitcher.js");
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  (0,_themeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_hamburger_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modals_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_contact_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-});
 
 /***/ }),
 
