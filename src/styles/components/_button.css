@@ -1,0 +1,49 @@
+.button {
+  background-color: transparent;
+  color: var(--light);
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+.button-link {
+  border: 1px solid var(--faded);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-base);
+}
+
+.button-link::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 0;
+  height: 147%;
+  border-radius: var(--radius-base);
+  z-index: -1;
+  background-color: var(--main-faded);
+  transition: width 0.2s ease;
+}
+
+.button-link:hover::after {
+  width: 18.4%;
+}
+
+.button--dialog {
+  color: var(--dark);
+  align-self: end;
+  padding: 0 1rem;
+}
+
+.button-card {
+  background-color: var(--faded);
+
+  &:hover {
+    scale: 1.02;
+  }
+}

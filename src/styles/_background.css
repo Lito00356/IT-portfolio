@@ -1,0 +1,30 @@
+.background {
+  background-size: 100%;
+  background-position: left;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.background__video {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.background__video--white {
+  display: none;
+}
+
+[data-theme="dark"] .background__video--black {
+  display: block;
+}
+[data-theme="light"] .background__video--white {
+  display: block;
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ligth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lito</title>
+
+    <meta name="description" content="Explore my portfolio to see creative projects, professional work experience, and skills in visual storytelling and design.">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./src/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./src/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./src/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio" />
+    <link rel="manifest" href="./src/images/favicon/site.webmanifest" />
+
+
+    <link rel="stylesheet" href="build/main.css">
+</head>
+
+<body>
+
+    <a class="skip-button" href="#maincontent" tabindex="1" aria-label="Skip to main content">Skip to content</a>
+
+    <div class="background">
+        <video class="background__video background__video--black" autoplay muted loop>
+            <source src="./src/video/bg-black.webm" type="video/webm">
+        </video>
+        <video class="background__video background__video--white" autoplay muted loop>
+            <source src="./src/video/bg-white.webm" type="video/webm">
+        </video>
+        <header class="container-80">
+            <nav class="navbar">
+                <a class="navbar__list-link logo" href="index.html" aria-label="Home">
+                    <span class="navbar__list-link--logo">T</span>LiTo</a>
+
+                <div class="navbar__list-wrapper">
+                    <ul class="navbar__list">
+                        <li class="navbar__list-item"><a class="navbar__list-link" href="index.html" aria-label="Home">Home</a></li>
+                        <li class="navbar__list-item"><a class="navbar__list-link" href="about.html" aria-label="About">About</a></li>
+                        <li class="navbar__list-item"><a class="navbar__list-link" href="projects.html" aria-label="Projects">Projects</a></li>
+                        <li class="navbar__list-item"><a class="navbar__list-link" href="contact.html" aria-label="Contact">Contact</a></li>
+                    </ul>
+
+
+
+                    <div class="switch-wrapper">
+                        <input class="switch" type="checkbox" id="darkmode-togle" aria-label="Toggle dark mode">
+                        <label class="switch__label" for="darkmode-togle" aria-hidden="true"></label>
+                        <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <circle cx="12" cy="12" r="5" stroke-width="1.5"></circle>
+                                <path d="M12 2V4" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M12 20V22" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M4 12L2 12" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M22 12L20 12" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M19.7778 4.22266L17.5558 6.25424" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M4.22217 4.22266L6.44418 6.25424" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M6.44434 17.5557L4.22211 19.7779" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M19.7778 19.7773L17.5558 17.5551" stroke-width="1.5" stroke-linecap="round"></path>
+                            </g>
+                        </svg>
+                        <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0174 2.80157C6.37072 3.29221 2.75 7.22328 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25C16.7767 21.25 20.7078 17.6293 21.1984 12.9826C19.8717 14.6669 17.8126 15.75 15.5 15.75C11.4959 15.75 8.25 12.5041 8.25 8.5C8.25 6.18738 9.33315 4.1283 11.0174 2.80157ZM1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C12.7166 1.25 13.0754 1.82126 13.1368 2.27627C13.196 2.71398 13.0342 3.27065 12.531 3.57467C10.8627 4.5828 9.75 6.41182 9.75 8.5C9.75 11.6756 12.3244 14.25 15.5 14.25C17.5882 14.25 19.4172 13.1373 20.4253 11.469C20.7293 10.9658 21.286 10.804 21.7237 10.8632C22.1787 10.9246 22.75 11.2834 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <button class="button navbar__hamburger" trigger-open="hamburger-trigger">
+
+                        <svg class="navbar__hamburger" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 12.5C9.5 11.6703 10.1703 11 11 11H29C29.8297 11 30.5 11.6703 30.5 12.5C30.5 13.3297 29.8297 14 29 14H11C10.1703 14 9.5 13.3297 9.5 12.5ZM9.5 20C9.5 19.1703 10.1703 18.5 11 18.5H29C29.8297 18.5 30.5 19.1703 30.5 20C30.5 20.8297 29.8297 21.5 29 21.5H11C10.1703 21.5 9.5 20.8297 9.5 20ZM30.5 27.5C30.5 28.3297 29.8297 29 29 29H11C10.1703 29 9.5 28.3297 9.5 27.5C9.5 26.6703 10.1703 26 11 26H29C29.8297 26 30.5 26.6703 30.5 27.5Z" />
+                        </svg>
+
+                    </button>
+                    <button class="button btn-close" trigger-close="hamburger-trigger">
+                        &#x2715;
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <section class="container-80">
+            <button class="title__aside button" popovertarget="toast">Lito ©</button>
+            <div class="toast-window" id="toast" popover>Hello my fellow programmer!</div>
+            <h1 class="title">Tomasz Liksza
+                <span>Junior Programmer based in Ghent</span>
+            </h1>
+        </section>
+    </div>
+
+
+    <div class="socials-banner ">
+        <a class="socials-banner__item linkedin" href="https://www.linkedin.com/in/tomaszli" target="_blank" rel="noopener noreferrer" aria-label="Linked profile">LinkedIn</a>
+        <a class="socials-banner__item github" href="https://github.com/Lito00356?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="Github profile">GitHub</a>
+        <a class="socials-banner__item imdb" href="https://www.imdb.com/name/nm10240524/?ref_=nv_sr_srsg_0_tt_1_nm_3_in_0_q_tomasz%2520liksza" target="_blank" rel="noopener noreferrer" aria-label="IMDB profile">IMDB</a>
+    </div>
+
+    <main id="maincontent">
+        <section class="image-card fade-in">
+
+            <picture class="content__wrapper" id="me">
+                <source class="image-card__media" media="(max-width: 42rem)" srcset="./src/images/webp/Portret_me.webp" type="image/webp">
+                <img class="image-card__media" src="./src/images/Portret_me.jpg" alt="my portrait">
+            </picture>
+            <div class="content__wrapper">
+                <h2 class="image-card__title">Student programming based in Belgium</h2>
+                <p class="image-card__content">
+                    Hi, I'm Tomasz Liksza — currently studying programming at Artevelde Hogeschool in Ghent. With a background in visual effects, I'm now diving into the world of web development and digital technology.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="about about--columns fade-in">
+
+            <article class="about__content">
+                <h2 class="about__title">What I can?</h2>
+                <p class="about__context">
+                    I specialize in full-stack development with a strong foundation in modern web technologies.
+                    Here are some of the tools and skills I work: <br>
+                    Languages: JavaScript, HTML, CSS<br>
+                    Frameworks & Libraries: React, Node.js<br>
+                    Other skills: Responsive design, UI/UX basics, Git version control, .ala.
+                    Always learning, always building.
+                </p>
+                <div class="about__projects">
+                    <div class="about__projects-item">
+                        <span>40+</span>
+                        <small>Projects completed</small>
+                    </div>
+                    <div class="about__projects-item">
+                        <span>20+</span>
+                        <small>Happy clients</small>
+                    </div>
+                </div>
+            </article>
+
+            <div class="about__content">
+                <button class="card button button-card" popovertarget="toast-web">
+                    <svg class="card__media" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M16.652 3.45506L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.5449 7.34795M16.652 3.45506C16.652 3.45506 16.7331 4.83379 17.9497 6.05032C19.1662 7.26685 20.5449 7.34795 20.5449 7.34795M16.652 3.45506L10.6872 9.41993C10.2832 9.82394 10.0812 10.0259 9.90743 10.2487C9.70249 10.5114 9.52679 10.7957 9.38344 11.0965C9.26191 11.3515 9.17157 11.6225 8.99089 12.1646L8.41242 13.9M20.5449 7.34795L14.5801 13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043 14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L10.1 15.5876M10.1 15.5876L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837 7.9492 15.2897 8.03811 15.0229L8.41242 13.9M10.1 15.5876L8.41242 13.9" stroke="#e2e2e2" stroke-width="1.5"></path>
+                            <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2" stroke="#c442cf" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                    <div class="card__content-wrapper">
+                        <strong class="card__title">Web development</strong>
+                        <small class="card__subtitle">5 websites</small>
+                    </div>
+                </button>
+                <button class="card button button-card" popovertarget="toast-app">
+                    <svg class="card__media" fill="#000000" viewBox="0 0 24 24" id="app-store" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <line id="secondary" x1="21" y1="17" x2="18" y2="17" style="fill: none; stroke: #c442cf; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                            <line id="primary" x1="20" y1="21" x2="14.29" y2="10.72" style="fill: none; stroke: #e2e2e2; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                            <line id="secondary-2" data-name="secondary" x1="12" y1="6.6" x2="10" y2="3" style="fill: none; stroke: #e2e2e2; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                            <line id="primary-2" data-name="primary" x1="14" y1="3" x2="4" y2="21" style="fill: none; stroke: #e2e2e2; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                            <line id="secondary-3" data-name="secondary" x1="13" y1="17" x2="3" y2="17" style="fill: none; stroke: #c442cf; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                        </g>
+                    </svg>
+                    <div class="card__content-wrapper">
+                        <strong class="card__title">App development</strong>
+                        <small class="card__subtitle">2 app's</small>
+                    </div>
+                </button>
+                <button class="card button button-card" popovertarget="toast-vfx">
+                    <svg class="card__media" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>ic_fluent_movies_and_tv_24_regular</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="ic_fluent_movies_and_tv_24_regular" fill="#e2e2e2" fill-rule="nonzero">
+                                    <path d="M19.7286477,3.91709009 L19.7796475,4.07673953 L20.3309222,5.99926292 C20.4355805,6.36424991 20.2508505,6.74366136 19.9126449,6.89230405 L19.8167039,6.92693721 L9.08979429,10.0020329 L20.2488588,10.0029698 C20.6285546,10.0029698 20.9423498,10.2851237 20.9920122,10.6511993 L20.9988588,10.7529698 L20.9988588,19.2509821 C20.9988588,20.713514 19.8571542,21.9093864 18.4163811,21.9959633 L18.2488588,22.0009821 L5.75,22.0009821 C4.28746816,22.0009821 3.09159572,20.8592775 3.00501879,19.4185045 L3,19.2509821 L2.99979429,10.8590329 L2.47803395,9.03789737 C2.07490554,7.63202154 2.84275532,6.16777873 4.20385145,5.68742476 L4.36350088,5.63642498 L16.3781751,2.19127259 C17.7840509,1.78814418 19.2482937,2.55599396 19.7286477,3.91709009 Z M19.498,11.502 L4.5,11.502 L4.5,19.2509821 C4.5,19.8550436 4.92847749,20.3590287 5.4980814,20.4755866 L5.62219476,20.4945285 L5.75,20.5009821 L18.2488588,20.5009821 C18.8960675,20.5009821 19.4283927,20.0091075 19.4924052,19.3787874 L19.4988588,19.2509821 L19.498,11.502 Z M6.27268011,6.6494258 L4.77695691,7.07831752 C4.15481999,7.25671241 3.7786565,7.8762725 3.89085867,8.49982068 L3.91988247,8.62445396 L4.26421826,9.82529556 L4.55930489,9.74043653 L6.27268011,6.6494258 Z M11.029003,5.28557216 L8.31151617,6.06479896 L6.59814094,9.15580969 L9.31562776,8.37658289 L11.029003,5.28557216 Z M15.7862871,3.92144289 L13.0688003,4.70066969 L11.3554251,7.79168042 L14.0719506,7.01272925 L15.7862871,3.92144289 Z M17.6334765,3.68788446 L16.1127092,6.42755115 L18.6812212,5.6912865 L18.3377549,4.49019556 C18.2305941,4.11648136 17.96425,3.83153666 17.6334765,3.68788446 Z" id="🎨-Color"> </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="card__content-wrapper">
+
+                        <strong class="card__title">2D/3D Compositing</strong>
+                        <small class="card__subtitle">40+ projects</small>
+                    </div>
+                </button>
+            </div>
+
+            <div class="toast-window" id="toast-web" popover>
+                <strong>Web development</strong>
+                <p class="toast__text">
+                    I’ve created several websites using HTML, CSS, JavaScript, SCSS, and tools like Vue, Laravel, and Vite.
+                </p>
+            </div>
+            <div class="toast-window" id="toast-app" popover>
+                <strong>App development</strong>
+                <p class="toast__text">
+                    I’ve built a few small apps using tools like Node,js, knex and objection. I'm eager to keep exploring mobile development.
+                </p>
+            </div>
+            <div class="toast-window" id="toast-vfx" popover>
+                <strong>VFX</strong>
+                <p class="toast__text">
+                    I worked in the VFX industry on several challenging productions, collaborating with talented teams to bring complex visuals to life. It was a demanding but incredibly fun and rewarding experience.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="contact fade-in-last">
+            <button class="contact__title button" contact-me>Get in touch!</button>
+            <a class="contact__link" href="contact.html" aria-label="Contact me">
+                Go ahead, send me an email!
+                <svg class="contact__icon" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M3.29289 5.29289C3.47386 5.11193 3.72386 5 4 5H20C20.2761 5 20.5261 5.11193 20.7071 5.29289M3.29289 5.29289C3.11193 5.47386 3 5.72386 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.72386 20.8881 5.47386 20.7071 5.29289M3.29289 5.29289L10.5858 12.5857C11.3668 13.3668 12.6332 13.3668 13.4142 12.5857L20.7071 5.29289" stroke="#ffffff" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+
+            </a>
+        </section>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-link linkedin" href="https://www.linkedin.com/in/tomaszli" target="_blank" rel="noopener noreferrer" aria-label="Linkedin profile">
+                            <svg class="footer__list-icon" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>linkedin [#ffffff]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs> </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -7479.000000)" fill="#ffffff">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z" id="linkedin-[#ffffff]"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__list-item ">
+                        <a class="footer__list-link github" href="https://github.com/Lito00356?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="Github profile">
+                            <svg class="footer__list-icon" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>github [#142]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs> </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__list-item ">
+                        <a class="footer__list-link imdb" href="https://www.imdb.com/name/nm10240524/?ref_=nv_sr_srsg_0_tt_1_nm_3_in_0_q_tomasz%2520liksza" target="_blank" rel="noopener noreferrer" aria-label="IMDB profile">
+                            <svg class="footer__list-icon" xmlns="http://www.w3.org/2000/svg" aria-label="IMDb" role="img" viewBox="0 0 512 512" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <rect width="512" height="512" rx="15%" fill="#ffc800"></rect>
+                                    <path d="M104 328V184H64v144zM189 184l-9 67-5-36-5-31h-50v144h34v-95l14 95h25l13-97v97h34V184zM256 328V184h62c15 0 26 11 26 25v94c0 14-11 25-26 25zm47-118l-9-1v94c5 0 9-1 10-3 2-2 2-8 2-18v-56-12l-3-4zM419 220h3c14 0 26 11 26 25v58c0 14-12 25-26 25h-3c-8 0-16-4-21-11l-2 9h-36V184h38v46c5-6 13-10 21-10zm-8 70v-34l-1-11c-1-2-4-3-6-3s-5 1-6 3v57c1 2 4 3 6 3s6-1 6-3l1-12z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <small class="footer__ARR">
+                Created by <strong><a href="#me">Tomasz</a></strong> | All rights reserved
+            </small>
+        </footer>
+
+    </main>
+
+    <script src="build/main.js"></script>
+</body>
+
+</html>

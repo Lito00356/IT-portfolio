@@ -1,0 +1,9 @@
+.skip-button {
+  position: absolute;
+  transform: translateY(-5rem);
+  transition: transform 0.3s ease;
+}
+
+.skip-button:focus {
+  transform: translateY(0);
+}

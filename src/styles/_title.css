@@ -1,0 +1,56 @@
+.title {
+  font-size: var(--text-base);
+  position: relative;
+  margin: 0 auto var(--text-xxl);
+
+  @media (min-width: 42rem) {
+    font-size: var(--text-xl);
+  }
+}
+
+.title--center {
+  text-align: center;
+}
+
+.title--projects {
+  font-size: 3rem;
+
+  @media (min-width: 42rem) {
+    font-size: 6rem;
+  }
+}
+
+.title-wrapper {
+  position: relative;
+}
+
+.title__aside {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  writing-mode: vertical-lr;
+}
+
+.title__subtitle {
+  position: absolute;
+  top: 90%;
+  left: 48%;
+  display: inline-block;
+}
+
+.title__subtitle::before {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-faded);
+  width: 110%;
+  height: 100%;
+  bottom: 0.25rem;
+  right: 0.2rem;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.title__subtitle:hover::before {
+  bottom: 0;
+  right: -0.5rem;
+}

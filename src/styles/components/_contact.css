@@ -1,0 +1,45 @@
+.contact:has(button) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: var(--spacing-lg) 0;
+  gap: 2rem;
+}
+
+.contact__title {
+  font-size: 3rem;
+}
+
+.contact__link {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  gap: 1rem;
+
+  @starting-style {
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.contact__link.open {
+  opacity: 1;
+  visibility: visible;
+  top: 8rem;
+  transition: top 0.5s ease, opacity 0.5s ease;
+  transition-delay: opacity 2s ease;
+}
+
+.contact__icon {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}

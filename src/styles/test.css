@@ -1,0 +1,15 @@
+.socials-banner {
+  margin: 2rem 0;
+  display: flex;
+  display: none;
+  gap: var(--text-xxxl);
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-md);
+  opacity: 0.5;
+}
+
+.socials-banner:hover {
+  background-color: rgb(150, 48, 111);
+  opacity: 1;
+}

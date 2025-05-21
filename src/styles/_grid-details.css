@@ -1,0 +1,26 @@
+.grid-details {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.grid-details__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.grid-details__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(350px, 1fr));
+  grid-template-rows: auto auto auto;
+  padding: 1rem;
+}
+
+.grid-details__item {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1/4;
+  padding: 1rem;
+}

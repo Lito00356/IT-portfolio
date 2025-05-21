@@ -1,0 +1,23 @@
+.fade-in {
+  animation: fadeIn both;
+  animation-timeline: view(70% 30%);
+}
+
+@media view {
+}
+
+.fade-in-last {
+  animation: fadeIn both;
+  animation-timeline: view(93% 0%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5rem) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale();
+  }
+}

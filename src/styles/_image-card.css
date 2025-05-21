@@ -1,0 +1,50 @@
+.image-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  max-width: 90%;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 0;
+  align-items: center;
+  border-bottom: 1px solid var(--faded);
+
+  @media (min-width: 42rem) {
+    max-width: 80%;
+    flex-wrap: nowrap;
+  }
+}
+
+.content__wrapper {
+  flex-basis: auto;
+  max-width: 30rem;
+
+  @media (min-width: 42rem) {
+    width: 50%;
+    flex-basis: 75%;
+  }
+}
+
+.image-card__media {
+  border-radius: 0 60% 55% 55%;
+  min-width: 18rem;
+
+  mask-image: url("/src/images/masks/mask_noise1.png");
+  mask-size: 2rem;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: mask-size 0.5s ease;
+
+  &:hover {
+    mask-size: 150rem;
+  }
+}
+
+.image-card__title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.image-card__content {
+  text-align: justify;
+  padding-bottom: var(--spacing-lg);
+}

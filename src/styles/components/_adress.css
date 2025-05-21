@@ -1,0 +1,15 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: var(--spacing-xxl) auto;
+  justify-content: space-around;
+
+  @media (min-width: 42rem) {
+    width: 80%;
+  }
+}
+
+.adress__content {
+  line-height: 225%;
+}
