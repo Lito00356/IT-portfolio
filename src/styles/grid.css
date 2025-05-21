@@ -26,6 +26,10 @@
   padding: 1rem;
 }
 
+.grid__item * {
+  color: white;
+}
+
 .grid__item--span {
   grid-row: span 2;
 }
