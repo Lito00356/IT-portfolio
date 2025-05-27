@@ -28,16 +28,6 @@
 .image-card__media {
   border-radius: 0 60% 55% 55%;
   min-width: 18rem;
-
-  mask-image: url("/src/images/masks/mask_noise1.png");
-  mask-size: 2rem;
-  mask-position: center;
-  mask-repeat: no-repeat;
-  transition: mask-size 0.5s ease;
-
-  &:hover {
-    mask-size: 150rem;
-  }
 }
 
 .image-card__title {

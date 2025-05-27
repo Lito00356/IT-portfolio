@@ -578,24 +578,6 @@ html {
 .image-card__media {
   border-radius: 0 60% 55% 55%;
   min-width: 18rem;
-
-  -webkit-mask-image: url("/src/images/masks/mask_noise1.png");
-
-          mask-image: url("/src/images/masks/mask_noise1.png");
-  -webkit-mask-size: 2rem;
-          mask-size: 2rem;
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  transition: -webkit-mask-size 0.5s ease;
-  transition: mask-size 0.5s ease;
-  transition: mask-size 0.5s ease, -webkit-mask-size 0.5s ease;
-
-  &:hover {
-    -webkit-mask-size: 150rem;
-            mask-size: 150rem;
-  }
 }
 
 .image-card__title {
