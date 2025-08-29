@@ -23,7 +23,6 @@
 @import url("./components/toast.css");
 @import url("./animations/scroll-left.css");
 @import url("./animations/fade-in.css");
-@import url("./animations/view-transitions.css");
 
 html {
   scroll-behavior: smooth;

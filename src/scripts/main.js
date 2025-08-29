@@ -1,11 +1,13 @@
-import initContact from "./contact.js";
 import initHamburgerMenu from "./hamburger.js";
 import initModals from "./modals.js";
 import initThemeSwitcher from "./themeSwitcher.js";
+import initProjectsPage from "./projects.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   initThemeSwitcher();
   initHamburgerMenu();
   initModals();
-  initContact();
+  if (window.location.pathname.endsWith("/projects") || window.location.pathname.endsWith("/projects.html")) {
+    initProjectsPage();
+  }
 });

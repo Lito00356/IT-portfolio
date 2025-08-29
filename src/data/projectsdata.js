@@ -1,5 +1,6 @@
-const projects = [
+export const projects = [
   {
+    id: 1,
     title: "John Wick 4",
     imageWeb: "john_wick4.webp",
     imageJpg: "john_wick4.jpg",
@@ -9,6 +10,7 @@ const projects = [
     descriptionLarge: "I worked on John Wick 4 as a compositor, focusing on cleanup, element integration, and greenscreen removal. My tasks included painting out unwanted elements, seamlessly blending CG and practical assets into live-action plates, and performing precise chromakey work to ensure clean extractions and smooth composites. Working on such a high-action, visually stylized film demanded both technical precision and a strong eye for cinematic detail.",
   },
   {
+    id: 2,
     title: "Heart Of Stone",
     imageWeb: "heart_of_stone.webp",
     imageJpg: "heart_of_stone.jpg",
@@ -18,6 +20,7 @@ const projects = [
     descriptionLarge: "On Heart of Stone, I was part of the compositing team, responsible for cleanup, greenscreen removal, and integration of CG and practical elements into live-action shots. My work involved removing rigs and markers, keying actors from greenscreen backgrounds, and ensuring that all added elements matched the lighting and motion of the original footage for a seamless final composite.",
   },
   {
+    id: 3,
     title: "Freaks Out",
     imageWeb: "freaks_out.webp",
     imageJpg: "freaks_out.jpg",
@@ -27,6 +30,7 @@ const projects = [
     descriptionLarge: "Freaks Out was one of the first live-action films I worked on as a compositor. I was responsible for complex cleanup work, including the removal of a full hand in several shots. This required detailed paint and prep work, frame-by-frame adjustments, and maintaining the continuity of motion and lighting in the affected areas. It was a challenging and rewarding introduction to high-end film compositing, pushing both my technical and creative problem-solving skills.",
   },
   {
+    id: 4,
     title: "To Do App",
     imageWeb: "to-do-app.webp",
     imageJpg: "to-do-app.jpg",
@@ -38,6 +42,7 @@ const projects = [
     link: "https://github.com/Lito00356/toDo-app",
   },
   {
+    id: 5,
     title: "Bouwdewijn Seapark",
     imageWeb: ".webp",
     imageJpg: ".jpg",
@@ -48,6 +53,7 @@ const projects = [
     link: "https://github.com/Lito00356/bouwdewijn-seapark-filtratie-app",
   },
   {
+    id: 6,
     title: "Kanban app",
     imageWeb: "kanban.webp",
     imageJpg: "kanban.jpg",
@@ -66,6 +72,7 @@ const projects = [
     ],
   },
   {
+    id: 7,
     title: "The Witcher",
     imageWeb: "the_witcher.webp",
     imageJpg: "the_witcher.jpg",
