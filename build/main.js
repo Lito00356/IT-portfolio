@@ -15,6 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 var projects = [{
   id: 1,
   title: "John Wick 4",
+  slug: "john-wick-4",
   imageWeb: "john_wick4.webp",
   imageJpg: "john_wick4.jpg",
   category: "Movie",
@@ -24,6 +25,7 @@ var projects = [{
 }, {
   id: 2,
   title: "Heart Of Stone",
+  slug: "heart-of-stone",
   imageWeb: "heart_of_stone.webp",
   imageJpg: "heart_of_stone.jpg",
   category: "Movie",
@@ -33,6 +35,7 @@ var projects = [{
 }, {
   id: 3,
   title: "Freaks Out",
+  slug: "freaks-out",
   imageWeb: "freaks_out.webp",
   imageJpg: "freaks_out.jpg",
   category: "Movie",
@@ -42,6 +45,7 @@ var projects = [{
 }, {
   id: 4,
   title: "To Do App",
+  slug: "to-do-app",
   imageWeb: "to-do-app.webp",
   imageJpg: "to-do-app.jpg",
   category: "App dev",
@@ -52,6 +56,7 @@ var projects = [{
 }, {
   id: 5,
   title: "Bouwdewijn Seapark",
+  slug: "bouwdewijn-seapark",
   imageWeb: ".webp",
   imageJpg: ".jpg",
   category: "App dev",
@@ -62,6 +67,7 @@ var projects = [{
 }, {
   id: 6,
   title: "Kanban app",
+  slug: "kanban-app",
   imageWeb: "kanban.webp",
   imageJpg: "kanban.jpg",
   category: "App dev",
@@ -87,6 +93,7 @@ var projects = [{
 }, {
   id: 7,
   title: "The Witcher",
+  slug: "the-witcher",
   imageWeb: "the_witcher.webp",
   imageJpg: "the_witcher.jpg",
   category: "Series",
@@ -200,21 +207,20 @@ function addEventListenersToProjects() {
   $projectLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      var projectId = e.target.getAttribute("data-projects");
+      var projectId = e.currentTarget.getAttribute("data-projects");
       openProjectPage(projectId);
     });
   });
 }
 function openProjectPage(projectId) {
   var URLTitle = "";
-  _data_projectsdata__WEBPACK_IMPORTED_MODULE_0__.projects.forEach(function (project) {
-    if (project.id === parseInt(projectId)) {
-      var splitTitle = project.title.split(" ");
-      var title = splitTitle.join("-");
-      URLTitle = title;
-    }
+  var project = _data_projectsdata__WEBPACK_IMPORTED_MODULE_0__.projects.find(function (p) {
+    return p.id === parseInt(projectId);
   });
-  window.location.assign("http://127.0.0.1:5501/projects.html?id=".concat(URLTitle));
+  if (project) {
+    URLTitle = project.title.split(" ").join("-");
+  }
+  window.location.assign("http://127.0.0.1:5501/project.html?slug=".concat(URLTitle));
 }
 function setProjectsPage() {
   var $projectsOutlet = document.getElementById("projects");

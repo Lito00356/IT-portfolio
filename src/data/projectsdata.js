@@ -2,6 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "John Wick 4",
+    slug: "john-wick-4",
     imageWeb: "john_wick4.webp",
     imageJpg: "john_wick4.jpg",
     category: "Movie",
@@ -12,6 +13,7 @@ export const projects = [
   {
     id: 2,
     title: "Heart Of Stone",
+    slug: "heart-of-stone",
     imageWeb: "heart_of_stone.webp",
     imageJpg: "heart_of_stone.jpg",
     category: "Movie",
@@ -22,6 +24,7 @@ export const projects = [
   {
     id: 3,
     title: "Freaks Out",
+    slug: "freaks-out",
     imageWeb: "freaks_out.webp",
     imageJpg: "freaks_out.jpg",
     category: "Movie",
@@ -32,6 +35,7 @@ export const projects = [
   {
     id: 4,
     title: "To Do App",
+    slug: "to-do-app",
     imageWeb: "to-do-app.webp",
     imageJpg: "to-do-app.jpg",
     category: "App dev",
@@ -44,6 +48,7 @@ export const projects = [
   {
     id: 5,
     title: "Bouwdewijn Seapark",
+    slug: "bouwdewijn-seapark",
     imageWeb: ".webp",
     imageJpg: ".jpg",
     category: "App dev",
@@ -55,6 +60,7 @@ export const projects = [
   {
     id: 6,
     title: "Kanban app",
+    slug: "kanban-app",
     imageWeb: "kanban.webp",
     imageJpg: "kanban.jpg",
     category: "App dev",
@@ -74,6 +80,7 @@ export const projects = [
   {
     id: 7,
     title: "The Witcher",
+    slug: "the-witcher",
     imageWeb: "the_witcher.webp",
     imageJpg: "the_witcher.jpg",
     category: "Series",

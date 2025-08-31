@@ -6,7 +6,7 @@ function addEventListenersToProjects() {
   $projectLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      const projectId = e.target.getAttribute("data-projects");
+      const projectId = e.currentTarget.getAttribute("data-projects");
       openProjectPage(projectId);
     });
   });
@@ -15,15 +15,12 @@ function addEventListenersToProjects() {
 function openProjectPage(projectId) {
   let URLTitle = "";
 
-  projects.forEach((project) => {
-    if (project.id === parseInt(projectId)) {
-      const splitTitle = project.title.split(" ");
-      const title = splitTitle.join("-");
-      URLTitle = title;
-    }
-  });
+  const project = projects.find((p) => p.id === parseInt(projectId));
+  if (project) {
+    URLTitle = project.title.split(" ").join("-");
+  }
 
-  window.location.assign(`http://127.0.0.1:5501/projects.html?id=${URLTitle}`);
+  window.location.assign(`http://127.0.0.1:5501/project.html?slug=${URLTitle}`);
 }
 
 function setProjectsPage() {
