@@ -1,7 +1,33 @@
 import { projects } from "../data/projectsdata";
 
+function addEventListenersToProjects() {
+  const $projectLinks = document.querySelectorAll(`[data-projects]`);
+
+  $projectLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const projectId = e.target.getAttribute("data-projects");
+      openProjectPage(projectId);
+    });
+  });
+}
+
+function openProjectPage(projectId) {
+  let URLTitle = "";
+
+  projects.forEach((project) => {
+    if (project.id === parseInt(projectId)) {
+      const splitTitle = project.title.split(" ");
+      const title = splitTitle.join("-");
+      URLTitle = title;
+    }
+  });
+
+  window.location.assign(`http://127.0.0.1:5501/projects.html?id=${URLTitle}`);
+}
+
 function setProjectsPage() {
-  const $projects = document.getElementById("projects");
+  const $projectsOutlet = document.getElementById("projects");
 
   let html = "";
 
@@ -29,7 +55,7 @@ function setProjectsPage() {
               </g>
             </svg>
                 <small>${project.category}</small><br>
-                <a class="description__link" href="projectsPage.html" value=${project.id}></a>
+                <a class="description__link" href="#" data-projects="${project.id}"></a>
                 </div>
               <strong>${project.title}</strong>
               <p>${project.descriptionSmall}</p>
@@ -39,7 +65,8 @@ function setProjectsPage() {
             `;
   }
 
-  $projects.innerHTML = html;
+  $projectsOutlet.innerHTML = html;
+  addEventListenersToProjects();
 }
 
 export default function initProjectsPage() {

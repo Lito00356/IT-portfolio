@@ -195,22 +195,44 @@ function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 
+function addEventListenersToProjects() {
+  var $projectLinks = document.querySelectorAll("[data-projects]");
+  $projectLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      var projectId = e.target.getAttribute("data-projects");
+      openProjectPage(projectId);
+    });
+  });
+}
+function openProjectPage(projectId) {
+  var URLTitle = "";
+  _data_projectsdata__WEBPACK_IMPORTED_MODULE_0__.projects.forEach(function (project) {
+    if (project.id === parseInt(projectId)) {
+      var splitTitle = project.title.split(" ");
+      var title = splitTitle.join("-");
+      URLTitle = title;
+    }
+  });
+  window.location.assign("http://127.0.0.1:5501/projects.html?id=".concat(URLTitle));
+}
 function setProjectsPage() {
-  var $projects = document.getElementById("projects");
+  var $projectsOutlet = document.getElementById("projects");
   var html = "";
   var _iterator = _createForOfIteratorHelper(_data_projectsdata__WEBPACK_IMPORTED_MODULE_0__.projects),
     _step;
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var project = _step.value;
-      html += "\n  <article class=\"grid__item grid__item--projects \">\n  \n        <picture class=\"grid__media\">\n            <source class=\"media__image\" media=\"(max-width: 42rem)\" srcset=\"./src/images/webp/".concat(project.imageWeb, "\" type=\"image/webp\">\n            <img class=\"media__image\" src=\"./src/images/").concat(project.imageJpg, "\" alt=\"").concat(project.title, "\">\n        </picture>\n        <div class=\"grid__item-description\">\n            <div class=\"description__wrapper\">\n            <svg class=\"grid__icon\" viewBox=\"0 0 24 24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" fill=\"#000000\">\n              <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                  <title>ic_fluent_movies_and_tv_24_regular</title>\n                  <desc>Created with Sketch.</desc>\n                    <g id=\"\uD83D\uDD0D-Product-Icons\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                      <g id=\"ic_fluent_movies_and_tv_24_regular\" fill=\"#e2e2e2\" fill-rule=\"nonzero\">\n                      <path d=\"M19.7286477,3.91709009 L19.7796475,4.07673953 L20.3309222,5.99926292 C20.4355805,6.36424991 20.2508505,6.74366136 19.9126449,6.89230405 L19.8167039,6.92693721 L9.08979429,10.0020329 L20.2488588,10.0029698 C20.6285546,10.0029698 20.9423498,10.2851237 20.9920122,10.6511993 L20.9988588,10.7529698 L20.9988588,19.2509821 C20.9988588,20.713514 19.8571542,21.9093864 18.4163811,21.9959633 L18.2488588,22.0009821 L5.75,22.0009821 C4.28746816,22.0009821 3.09159572,20.8592775 3.00501879,19.4185045 L3,19.2509821 L2.99979429,10.8590329 L2.47803395,9.03789737 C2.07490554,7.63202154 2.84275532,6.16777873 4.20385145,5.68742476 L4.36350088,5.63642498 L16.3781751,2.19127259 C17.7840509,1.78814418 19.2482937,2.55599396 19.7286477,3.91709009 Z M19.498,11.502 L4.5,11.502 L4.5,19.2509821 C4.5,19.8550436 4.92847749,20.3590287 5.4980814,20.4755866 L5.62219476,20.4945285 L5.75,20.5009821 L18.2488588,20.5009821 C18.8960675,20.5009821 19.4283927,20.0091075 19.4924052,19.3787874 L19.4988588,19.2509821 L19.498,11.502 Z M6.27268011,6.6494258 L4.77695691,7.07831752 C4.15481999,7.25671241 3.7786565,7.8762725 3.89085867,8.49982068 L3.91988247,8.62445396 L4.26421826,9.82529556 L4.55930489,9.74043653 L6.27268011,6.6494258 Z M11.029003,5.28557216 L8.31151617,6.06479896 L6.59814094,9.15580969 L9.31562776,8.37658289 L11.029003,5.28557216 Z M15.7862871,3.92144289 L13.0688003,4.70066969 L11.3554251,7.79168042 L14.0719506,7.01272925 L15.7862871,3.92144289 Z M17.6334765,3.68788446 L16.1127092,6.42755115 L18.6812212,5.6912865 L18.3377549,4.49019556 C18.2305941,4.11648136 17.96425,3.83153666 17.6334765,3.68788446 Z\" id=\"\uD83C\uDFA8-Color\"> </path>\n                    </g>\n                </g>\n              </g>\n            </svg>\n                <small>").concat(project.category, "</small><br>\n                <a class=\"description__link\" href=\"projectsPage.html\" value=").concat(project.id, "></a>\n                </div>\n              <strong>").concat(project.title, "</strong>\n              <p>").concat(project.descriptionSmall, "</p>\n            </div>\n            \n            </article>\n            ");
+      html += "\n  <article class=\"grid__item grid__item--projects \">\n  \n        <picture class=\"grid__media\">\n            <source class=\"media__image\" media=\"(max-width: 42rem)\" srcset=\"./src/images/webp/".concat(project.imageWeb, "\" type=\"image/webp\">\n            <img class=\"media__image\" src=\"./src/images/").concat(project.imageJpg, "\" alt=\"").concat(project.title, "\">\n        </picture>\n        <div class=\"grid__item-description\">\n            <div class=\"description__wrapper\">\n            <svg class=\"grid__icon\" viewBox=\"0 0 24 24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" fill=\"#000000\">\n              <g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g>\n                <g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g>\n                  <g id=\"SVGRepo_iconCarrier\">\n                  <title>ic_fluent_movies_and_tv_24_regular</title>\n                  <desc>Created with Sketch.</desc>\n                    <g id=\"\uD83D\uDD0D-Product-Icons\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                      <g id=\"ic_fluent_movies_and_tv_24_regular\" fill=\"#e2e2e2\" fill-rule=\"nonzero\">\n                      <path d=\"M19.7286477,3.91709009 L19.7796475,4.07673953 L20.3309222,5.99926292 C20.4355805,6.36424991 20.2508505,6.74366136 19.9126449,6.89230405 L19.8167039,6.92693721 L9.08979429,10.0020329 L20.2488588,10.0029698 C20.6285546,10.0029698 20.9423498,10.2851237 20.9920122,10.6511993 L20.9988588,10.7529698 L20.9988588,19.2509821 C20.9988588,20.713514 19.8571542,21.9093864 18.4163811,21.9959633 L18.2488588,22.0009821 L5.75,22.0009821 C4.28746816,22.0009821 3.09159572,20.8592775 3.00501879,19.4185045 L3,19.2509821 L2.99979429,10.8590329 L2.47803395,9.03789737 C2.07490554,7.63202154 2.84275532,6.16777873 4.20385145,5.68742476 L4.36350088,5.63642498 L16.3781751,2.19127259 C17.7840509,1.78814418 19.2482937,2.55599396 19.7286477,3.91709009 Z M19.498,11.502 L4.5,11.502 L4.5,19.2509821 C4.5,19.8550436 4.92847749,20.3590287 5.4980814,20.4755866 L5.62219476,20.4945285 L5.75,20.5009821 L18.2488588,20.5009821 C18.8960675,20.5009821 19.4283927,20.0091075 19.4924052,19.3787874 L19.4988588,19.2509821 L19.498,11.502 Z M6.27268011,6.6494258 L4.77695691,7.07831752 C4.15481999,7.25671241 3.7786565,7.8762725 3.89085867,8.49982068 L3.91988247,8.62445396 L4.26421826,9.82529556 L4.55930489,9.74043653 L6.27268011,6.6494258 Z M11.029003,5.28557216 L8.31151617,6.06479896 L6.59814094,9.15580969 L9.31562776,8.37658289 L11.029003,5.28557216 Z M15.7862871,3.92144289 L13.0688003,4.70066969 L11.3554251,7.79168042 L14.0719506,7.01272925 L15.7862871,3.92144289 Z M17.6334765,3.68788446 L16.1127092,6.42755115 L18.6812212,5.6912865 L18.3377549,4.49019556 C18.2305941,4.11648136 17.96425,3.83153666 17.6334765,3.68788446 Z\" id=\"\uD83C\uDFA8-Color\"> </path>\n                    </g>\n                </g>\n              </g>\n            </svg>\n                <small>").concat(project.category, "</small><br>\n                <a class=\"description__link\" href=\"#\" data-projects=\"").concat(project.id, "\"></a>\n                </div>\n              <strong>").concat(project.title, "</strong>\n              <p>").concat(project.descriptionSmall, "</p>\n            </div>\n            \n            </article>\n            ");
     }
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
-  $projects.innerHTML = html;
+  $projectsOutlet.innerHTML = html;
+  addEventListenersToProjects();
 }
 function initProjectsPage() {
   setProjectsPage();
