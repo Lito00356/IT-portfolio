@@ -55,6 +55,7 @@
   padding: 1rem;
   grid-column: span 1;
   max-width: 100%;
+  width: 26rem;
   grid-auto-flow: dense;
 }
 

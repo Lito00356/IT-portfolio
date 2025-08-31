@@ -15,9 +15,10 @@ function renderPage(projectDetails) {
     return;
   }
 
-  $detail.innerHTML = `
+  if (projectDetails.category.toLowerCase() === "movie") {
+    $detail.innerHTML = `
   <section class="project-details">
-    <picture class="grid-details__image-wrapper" id="me">
+    <picture class="grid-details__image-wrapper vfx" id="me">
       <source class="grid-details__image" media="(max-width: 42rem)" srcset="./src/images/webp/${projectDetails.imageWeb}" type="image/webp">
       <img class="grid-details__image" src="./src/images/${projectDetails.imageJpg}" alt="my portrait">
     </picture>
@@ -31,6 +32,24 @@ function renderPage(projectDetails) {
     </div>
   </section>
   `;
+  } else {
+    $detail.innerHTML = `
+    <section class="project-details">
+      <picture class="grid-details__image-wrapper" id="me">
+        <source class="grid-details__image" media="(max-width: 42rem)" srcset="./src/images/webp/${projectDetails.imageWeb}" type="image/webp">
+        <img class="grid-details__image" src="./src/images/${projectDetails.imageJpg}" alt="my portrait">
+      </picture>
+      <div>
+        <h2 class="project-details-title">
+            ${projectDetails.title}
+        </h2>
+        <p class="project-details-info">
+            ${projectDetails.descriptionLarge}
+        </p>
+      </div>
+    </section>
+    `;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -986,6 +986,7 @@ html {
   padding: 1rem;
   grid-column: span 1;
   max-width: 100%;
+  width: 26rem;
   grid-auto-flow: dense;
 }
 
@@ -1066,7 +1067,11 @@ html {
 }
 
 .grid-details__image-wrapper {
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+
+  &.vfx {
+    max-width: 30rem;
+  }
 }
 
 .project-details-title {

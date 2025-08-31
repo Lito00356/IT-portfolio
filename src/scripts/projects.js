@@ -30,7 +30,7 @@ function filteredProjectsDisplay(projects, filteredString) {
 
   filteredCategories.forEach((project) => {
     html += `
-    <article class="grid__item grid__item--projects ">
+    <article class="grid__item grid__item--projects fade-in">
       <picture class="grid__media">
         <source class="media__image" media="(max-width: 42rem)" srcset="./src/images/webp/${project.imageWeb}" type="image/webp">
         <img class="media__image" src="./src/images/${project.imageJpg}" alt="${project.title}">
@@ -60,6 +60,7 @@ function filteredProjectsDisplay(projects, filteredString) {
     `;
 
     $projectsOutlet.innerHTML = html;
+    addEventListenersToProjects();
   });
 }
 
@@ -87,6 +88,7 @@ function openProjectPage(projectId) {
 }
 
 const $projectsOutlet = document.getElementById("projects");
+
 function setProjectsPage() {
   let html = "";
 

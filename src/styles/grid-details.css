@@ -21,7 +21,11 @@
 }
 
 .grid-details__image-wrapper {
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+
+  &.vfx {
+    max-width: 30rem;
+  }
 }
 
 .project-details-title {
