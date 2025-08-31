@@ -451,6 +451,10 @@ html {
 
 .navbar-filter__list-button {
   text-decoration: none;
+
+  &.active {
+    border-bottom: 1px solid white;
+  }
 }
 
 .title {
