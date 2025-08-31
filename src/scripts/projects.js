@@ -22,9 +22,10 @@ $filterButtons.forEach((button) => {
 function filteredProjectsDisplay(projects, filteredString) {
   let html = "";
   const filteredCategories = projects.filter((category) => category.category.toLowerCase() === filteredString);
+  console.log(filteredCategories);
 
-  if (!filteredCategories) {
-    return;
+  if (filteredCategories.length === 0) {
+    $projectsOutlet.innerHTML = `<p>No projects found yet</p>`;
   }
 
   filteredCategories.forEach((project) => {
