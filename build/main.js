@@ -142,6 +142,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modals_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals.js */ "./src/scripts/modals.js");
 /* harmony import */ var _themeSwitcher_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./themeSwitcher.js */ "./src/scripts/themeSwitcher.js");
 /* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./projects.js */ "./src/scripts/projects.js");
+/* harmony import */ var _titles_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./titles.js */ "./src/scripts/titles.js");
+
 
 
 
@@ -153,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.endsWith("/projects") || window.location.pathname.endsWith("/projects.html")) {
     (0,_projects_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
   }
+  (0,_titles_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 /***/ }),
@@ -313,6 +316,52 @@ function initThemeSwitcher() {
   $switch.addEventListener("click", function () {
     toggleDarkMode();
   });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/titles.js":
+/*!*******************************!*\
+  !*** ./src/scripts/titles.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initVariableTitles)
+/* harmony export */ });
+var $headings = document.querySelectorAll("h1, h2");
+function easing(x) {
+  var clampX = Math.max(0, Math.min(x, 1));
+  return Math.sin(x * Math.PI / 2);
+}
+function addListenerToHeadings($headings) {
+  var allSpans = [];
+  $headings.forEach(function ($heading) {
+    $heading.innerHTML = $heading.innerHTML.split("").map(function (letter) {
+      return "<span data-set=\"variable\">".concat(letter, "</span>");
+    }).join("");
+    var spans = $heading.querySelectorAll("span[data-set=variable]");
+    allSpans = allSpans.concat(Array.from(spans));
+  });
+  document.addEventListener("mousemove", function (e) {
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+    allSpans.forEach(function (span) {
+      var bounds = span.getBoundingClientRect();
+      var spanX = bounds.left + bounds.width / 2;
+      var spanY = bounds.top + bounds.height / 2;
+      var diffX = mouseX - spanX;
+      var diffY = mouseY - spanY;
+      var distance = Math.sqrt(diffX * diffX + diffY * diffY);
+      var normalizedDistance = distance / 200;
+      var weight = 900 - 800 * easing(normalizedDistance);
+      span.style.fontVariationSettings = "\"wght\" ".concat(weight);
+    });
+  });
+}
+function initVariableTitles() {
+  addListenerToHeadings($headings);
 }
 
 /***/ }),

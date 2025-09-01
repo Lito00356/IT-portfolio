@@ -287,6 +287,7 @@ html {
 }
 [data-theme="light"] .background__video--white {
   display: block;
+  filter: hue-rotate(175deg);
 }
 
 .container-80 {
@@ -1199,5 +1200,10 @@ p,
 small {
   text-decoration: none;
   color: var(--light);
+}
+
+h1,
+h2 {
+  font-variation-settings: "wght" 100;
 }
 
