@@ -33,7 +33,7 @@ function addListenerToHeadings($headings) {
 
       const normalizedDistance = distance / 200;
 
-      const weight = 900 - 800 * easing(normalizedDistance);
+      const weight = 900 - 800 * normalizedDistance;
 
       span.style.fontVariationSettings = `"wght" ${weight}`;
     });

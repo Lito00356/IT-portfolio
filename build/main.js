@@ -355,7 +355,7 @@ function addListenerToHeadings($headings) {
       var diffY = mouseY - spanY;
       var distance = Math.sqrt(diffX * diffX + diffY * diffY);
       var normalizedDistance = distance / 200;
-      var weight = 900 - 800 * easing(normalizedDistance);
+      var weight = 900 - 800 * normalizedDistance;
       span.style.fontVariationSettings = "\"wght\" ".concat(weight);
     });
   });
