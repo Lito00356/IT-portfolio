@@ -5,7 +5,7 @@
   display: block;
   background-color: var(--faded);
   border-radius: 1.25rem;
-  box-shadow: inset 0px 2px 10px var(--secondary-faded), inset 0px 0px 5px var(--secondary-faded);
+  box-shadow: inset 0px 2px 5px var(--main-faded), inset 0px 0px 5px var(--main-faded);
   transition: 0.3s ease;
 }
 
@@ -34,7 +34,7 @@
 
 .switch:checked + label {
   background-color: var(--light);
-  box-shadow: inset 0px 2px 10px var(--main-faded), inset 0px 0px 5px var(--main-faded);
+  box-shadow: inset 0px 2px 5px var(--main-faded), inset 0px 0px 5px var(--main-faded);
 }
 
 .switch:checked + label:after {

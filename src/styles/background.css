@@ -27,5 +27,5 @@
 }
 [data-theme="light"] .background__video--white {
   display: block;
-  filter: hue-rotate(175deg);
+  filter: hue-rotate(175deg) brightness(1) contrast(1.2);
 }

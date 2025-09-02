@@ -46,7 +46,7 @@
 
 :root[data-theme="light"] {
   --black: #090109;
-  --grey: #edfafe;
+  --grey: #ffffff;
   --dark-grey: #2e2e2e;
   --faded-grey: #9b9b9b6c;
   --main-primairy: hsl(302, 89%, 44%);
@@ -70,7 +70,7 @@
 
 :root[data-theme="dark"] {
   --black: #090109;
-  --grey: #edfafe;
+  --grey: #ffffff;
   --dark-grey: #2e2e2e;
   --faded-grey: #9b9b9b6c;
   --main-primairy: hsl(302, 89%, 44%);
