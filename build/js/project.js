@@ -19,7 +19,7 @@ var projects = [{
   imageWeb: "john_wick4.webp",
   imageJpg: "john_wick4.jpg",
   category: "Movie",
-  icon: "",
+  icon: 1,
   descriptionSmall: "Action movie about John Wick",
   descriptionLarge: "I worked on John Wick 4 as a compositor, focusing on cleanup, element integration, and greenscreen removal. My tasks included painting out unwanted elements, seamlessly blending CG and practical assets into live-action plates, and performing precise chromakey work to ensure clean extractions and smooth composites. Working on such a high-action, visually stylized film demanded both technical precision and a strong eye for cinematic detail."
 }, {
@@ -29,7 +29,7 @@ var projects = [{
   imageWeb: "heart_of_stone.webp",
   imageJpg: "heart_of_stone.jpg",
   category: "Movie",
-  icon: "",
+  icon: 1,
   descriptionSmall: "Action movie about s spy",
   descriptionLarge: "On Heart of Stone, I was part of the compositing team, responsible for cleanup, greenscreen removal, and integration of CG and practical elements into live-action shots. My work involved removing rigs and markers, keying actors from greenscreen backgrounds, and ensuring that all added elements matched the lighting and motion of the original footage for a seamless final composite."
 }, {
@@ -39,7 +39,7 @@ var projects = [{
   imageWeb: "freaks_out.webp",
   imageJpg: "freaks_out.jpg",
   category: "Movie",
-  icon: "",
+  icon: 1,
   descriptionSmall: "Science-fiction and superpowers in WWII",
   descriptionLarge: "Freaks Out was one of the first live-action films I worked on as a compositor. I was responsible for complex cleanup work, including the removal of a full hand in several shots. This required detailed paint and prep work, frame-by-frame adjustments, and maintaining the continuity of motion and lighting in the affected areas. It was a challenging and rewarding introduction to high-end film compositing, pushing both my technical and creative problem-solving skills."
 }, {
@@ -49,7 +49,7 @@ var projects = [{
   imageWeb: "to-do-app.webp",
   imageJpg: "to-do-app.jpg",
   category: "App dev",
-  icon: "",
+  icon: 4,
   descriptionSmall: "An app to track your to-do's",
   descriptionLarge: "In this project, I built a fully functional to-do application using Next.js for the frontend and EJS for templating where needed. On the backend, I used JavaScript with Objection.js as the ORM and Knex.js for query building and migrations. The app allows users to create, update, and delete tasks, with all data stored in a relational database. This project helped me deepen my understanding of routing, server-side rendering, and database modeling using a modular and scalable approach.",
   link: "https://github.com/Lito00356/toDo-app"
@@ -60,7 +60,7 @@ var projects = [{
   imageWeb: "bspf.webp",
   imageJpg: "bspf.jpg",
   category: "App dev",
-  icon: "",
+  icon: 4,
   descriptionSmall: "Application to track filtering systems",
   descriptionLarge: "Seapark LSS (Seapark Life Support System) is a management application designed for Boudewijn Seapark in Belgium. The app is created by 3 students of ArteveldeHogeschool as a school project. The application aims to help track and manage various tasks and measurements within the park, focusing on tasks related to water management (pumps, filters, etc.) and the associated measurements (e.g., water parameters).",
   link: "https://github.com/Lito00356/bouwdewijn-seapark-filtratie-app"
@@ -71,7 +71,7 @@ var projects = [{
   imageWeb: "kanban.webp",
   imageJpg: "kanban.jpg",
   category: "App dev",
-  icon: "",
+  icon: 4,
   descriptionSmall: "Kaban-style application",
   descriptionLarge: [{
     text: "I created a kanban-style task management app that allows users to organize projects, tasks, and tags. Each project has tasks that can move across different progress states like To Do, In Progress, Ready for Review, Done, and Backlog."
@@ -97,7 +97,7 @@ var projects = [{
   imageWeb: "the_witcher.webp",
   imageJpg: "the_witcher.jpg",
   category: "Series",
-  icon: "",
+  icon: 2,
   descriptionSmall: "Series about Geral Of Rivia trying to find his ward from the law of surprise",
   descriptionLarge: "On The Witcher season 4, I contributed by integrating detailed matte paintings to extend and enhance environments, ensuring seamless blends with live-action footage. Additionally, I performed rig cleanup and worked on the reconstruction of characters, removing unwanted rigs and refining shots to maintain visual continuity and realism. This role demanded precision and a strong understanding of both compositing and character workflows within a complex VFX pipeline."
 }];
