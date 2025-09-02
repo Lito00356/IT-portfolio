@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.endsWith("/projects") || window.location.pathname.endsWith("/projects.html")) {
     (0,_projects_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
   }
-  (0,_titles_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  // initVariableTitles();
 });
 
 /***/ }),

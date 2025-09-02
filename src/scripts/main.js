@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.endsWith("/projects") || window.location.pathname.endsWith("/projects.html")) {
     initProjectsPage();
   }
-  initVariableTitles();
+  // initVariableTitles();
 });

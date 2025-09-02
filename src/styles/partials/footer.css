@@ -25,15 +25,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.linkedin {
+    background-color: blue;
+    padding: 0.3rem;
+  }
+
+  &.github {
+    fill: var(--light);
+  }
 }
 
 .footer__list-icon {
   width: var(--sizing-md);
 }
 
-.github {
-  fill: white;
-}
 .footer__ARR {
   margin-top: var(--spacing-base);
 
