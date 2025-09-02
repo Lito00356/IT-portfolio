@@ -6,7 +6,6 @@ const $filterButtons = document.querySelectorAll("button[data-filter");
 $filterButtons.forEach((button) => {
   button.addEventListener("click", function (e) {
     const filteredString = e.currentTarget.dataset.filter;
-    console.log(filteredString);
     $buttonWrapper.forEach((wrapper) => {
       wrapper.classList.remove("active");
     });
@@ -20,8 +19,6 @@ $filterButtons.forEach((button) => {
 });
 
 function selectIcon(number) {
-  console.log(number);
-
   switch (number) {
     case 1:
       return `
@@ -84,7 +81,6 @@ function selectIcon(number) {
 function filteredProjectsDisplay(projects, filteredString) {
   let html = "";
   const filteredCategories = projects.filter((category) => category.category.toLowerCase() === filteredString);
-  console.log(filteredCategories);
 
   if (filteredCategories.length === 0) {
     $projectsOutlet.innerHTML = `<p>No projects found yet</p>`;

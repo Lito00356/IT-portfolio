@@ -3,11 +3,26 @@ import { projects } from "../data/projectsdata";
 function getProjectFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("slug");
-  const projectDetails = projects.find((p) => p.title.split(" ").join("-") === slug);
+  const projectDetails = projects.find((p) => p.slug === slug.toLowerCase());
 
   return projectDetails;
 }
 
+function renderDescription(description) {
+  if (description.type === "simple") {
+    return `<p class="project-details-info">${description.content}</p>`;
+  }
+  if (description.type === "rich") {
+    return description.content
+      .map((item) => {
+        if (item.text) return `<p class="project-details-info">${item.text}</p>`;
+        if (item.listItems) return `<ul>${item.listItems.map((li) => `<li>${li}</li>`).join("")}</ul>`;
+        return "";
+      })
+      .join("");
+  }
+  return "";
+}
 function renderPage(projectDetails) {
   const $detail = document.getElementById("project-detail");
   if (!projectDetails) {
@@ -27,7 +42,7 @@ function renderPage(projectDetails) {
           ${projectDetails.title}
       </h2>
       <p class="project-details-info">
-          ${projectDetails.descriptionLarge}
+          ${renderDescription(projectDetails.descriptionLarge)}
       </p>
     </div>
   </section>
@@ -44,7 +59,7 @@ function renderPage(projectDetails) {
             ${projectDetails.title}
         </h2>
         <p class="project-details-info">
-            ${projectDetails.descriptionLarge}
+            ${renderDescription(projectDetails.descriptionLarge)}
         </p>
       </div>
     </section>

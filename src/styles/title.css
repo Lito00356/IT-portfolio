@@ -9,7 +9,12 @@
 }
 
 .title--center {
+  font-size: 3rem;
   text-align: center;
+
+  @media (min-width: 42rem) {
+    font-size: 6rem;
+  }
 }
 
 .title--projects {
@@ -34,8 +39,12 @@
 .title__subtitle {
   position: absolute;
   top: 90%;
-  left: 48%;
+  left: 40%;
   display: inline-block;
+
+  @media (min-width: 42rem) {
+    left: 48%;
+  }
 }
 
 .title__subtitle::before {

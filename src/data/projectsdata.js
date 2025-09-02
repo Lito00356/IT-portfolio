@@ -8,7 +8,11 @@ export const projects = [
     category: "Movie",
     icon: 1,
     descriptionSmall: "Action movie about John Wick",
-    descriptionLarge: "I worked on John Wick 4 as a compositor, focusing on cleanup, element integration, and greenscreen removal. My tasks included painting out unwanted elements, seamlessly blending CG and practical assets into live-action plates, and performing precise chromakey work to ensure clean extractions and smooth composites. Working on such a high-action, visually stylized film demanded both technical precision and a strong eye for cinematic detail.",
+    descriptionLarge: {
+      type: "simple",
+      content: "I worked on John Wick 4 as a compositor, focusing on cleanup, element integration, and greenscreen removal. My tasks included painting out unwanted elements, seamlessly blending CG and practical assets into live-action plates, and performing precise chromakey work to ensure clean extractions and smooth composites. Working on such a high-action, visually stylized film demanded both technical precision and a strong eye for cinematic detail.",
+    },
+    link: null,
   },
   {
     id: 2,
@@ -18,8 +22,12 @@ export const projects = [
     imageJpg: "heart_of_stone.jpg",
     category: "Movie",
     icon: 1,
-    descriptionSmall: "Action movie about s spy",
-    descriptionLarge: "On Heart of Stone, I was part of the compositing team, responsible for cleanup, greenscreen removal, and integration of CG and practical elements into live-action shots. My work involved removing rigs and markers, keying actors from greenscreen backgrounds, and ensuring that all added elements matched the lighting and motion of the original footage for a seamless final composite.",
+    descriptionSmall: "Action movie about a spy",
+    descriptionLarge: {
+      type: "simple",
+      content: "On Heart of Stone, I was part of the compositing team, responsible for cleanup, greenscreen removal, and integration of CG and practical elements into live-action shots. My work involved removing rigs and markers, keying actors from greenscreen backgrounds, and ensuring that all added elements matched the lighting and motion of the original footage for a seamless final composite.",
+    },
+    link: null,
   },
   {
     id: 3,
@@ -30,7 +38,11 @@ export const projects = [
     category: "Movie",
     icon: 1,
     descriptionSmall: "Science-fiction and superpowers in WWII",
-    descriptionLarge: "Freaks Out was one of the first live-action films I worked on as a compositor. I was responsible for complex cleanup work, including the removal of a full hand in several shots. This required detailed paint and prep work, frame-by-frame adjustments, and maintaining the continuity of motion and lighting in the affected areas. It was a challenging and rewarding introduction to high-end film compositing, pushing both my technical and creative problem-solving skills.",
+    descriptionLarge: {
+      type: "simple",
+      content: "Freaks Out was one of the first live-action films I worked on as a compositor. I was responsible for complex cleanup work, including the removal of a full hand in several shots. This required detailed paint and prep work, frame-by-frame adjustments, and maintaining the continuity of motion and lighting in the affected areas. It was a challenging and rewarding introduction to high-end film compositing, pushing both my technical and creative problem-solving skills.",
+    },
+    link: null,
   },
   {
     id: 4,
@@ -41,8 +53,11 @@ export const projects = [
     category: "App dev",
     icon: 4,
     descriptionSmall: "An app to track your to-do's",
-    descriptionLarge:
-      "In this project, I built a fully functional to-do application using Next.js for the frontend and EJS for templating where needed. On the backend, I used JavaScript with Objection.js as the ORM and Knex.js for query building and migrations. The app allows users to create, update, and delete tasks, with all data stored in a relational database. This project helped me deepen my understanding of routing, server-side rendering, and database modeling using a modular and scalable approach.",
+    descriptionLarge: {
+      type: "simple",
+      content:
+        "In this project, I built a fully functional to-do application using Next.js for the frontend and EJS for templating where needed. On the backend, I used JavaScript with Objection.js as the ORM and Knex.js for query building and migrations. The app allows users to create, update, and delete tasks, with all data stored in a relational database. This project helped me deepen my understanding of routing, server-side rendering, and database modeling using a modular and scalable approach.",
+    },
     link: "https://github.com/Lito00356/toDo-app",
   },
   {
@@ -54,7 +69,10 @@ export const projects = [
     category: "App dev",
     icon: 4,
     descriptionSmall: "Application to track filtering systems",
-    descriptionLarge: "Seapark LSS (Seapark Life Support System) is a management application designed for Boudewijn Seapark in Belgium. The app is created by 3 students of ArteveldeHogeschool as a school project. The application aims to help track and manage various tasks and measurements within the park, focusing on tasks related to water management (pumps, filters, etc.) and the associated measurements (e.g., water parameters).",
+    descriptionLarge: {
+      type: "simple",
+      content: "Seapark LSS (Seapark Life Support System) is a management application designed for Boudewijn Seapark in Belgium. The app is created by 3 students of ArteveldeHogeschool as a school project. The application aims to help track and manage various tasks and measurements within the park, focusing on tasks related to water management (pumps, filters, etc.) and the associated measurements (e.g., water parameters).",
+    },
     link: "https://github.com/Lito00356/bouwdewijn-seapark-filtratie-app",
   },
   {
@@ -65,17 +83,17 @@ export const projects = [
     imageJpg: "kanban.jpg",
     category: "App dev",
     icon: 4,
-    descriptionSmall: "Kaban-style application",
-    descriptionLarge: [
-      { text: "I created a kanban-style task management app that allows users to organize projects, tasks, and tags. Each project has tasks that can move across different progress states like To Do, In Progress, Ready for Review, Done, and Backlog." },
-      { text: "I built features such as:" },
-      { listItem: "Task dialogs for viewing, editing, and deleting tasks." },
-      { listItem: "Tag management with dynamic assignment and removal." },
-      { listItem: "A search bar that filters tasks by title or tag while keeping them in the correct kanban columns" },
-      { listItem: "Confirmation dialogs for safer deletes." },
-      { listItem: "Automatic syncing of tag changes to the backend." },
-      { text: "The app is built with React on the frontend, using hooks for state management, and Strapi as the backend CMS to manage projects, tasks, and tags. Data is handled via REST API calls, and I designed the UI around modals, inline editing, and a kanban board layout for a smooth user experience." },
-    ],
+    descriptionSmall: "Kanban-style application",
+    descriptionLarge: {
+      type: "rich",
+      content: [
+        { text: "I created a kanban-style task management app that allows users to organize projects, tasks, and tags. Each project has tasks that can move across different progress states like To Do, In Progress, Ready for Review, Done, and Backlog." },
+        { text: "I built features such as:" },
+        { listItems: ["Task dialogs for viewing, editing, and deleting tasks.", "Tag management with dynamic assignment and removal.", "A search bar that filters tasks by title or tag while keeping them in the correct kanban columns", "Confirmation dialogs for safer deletes.", "Automatic syncing of tag changes to the backend."] },
+        { text: "The app is built with React on the frontend, using hooks for state management, and Strapi as the backend CMS to manage projects, tasks, and tags. Data is handled via REST API calls, and I designed the UI around modals, inline editing, and a kanban board layout for a smooth user experience." },
+      ],
+    },
+    link: null,
   },
   {
     id: 7,
@@ -85,7 +103,11 @@ export const projects = [
     imageJpg: "the_witcher.jpg",
     category: "Series",
     icon: 2,
-    descriptionSmall: "Series about Geral Of Rivia trying to find his ward from the law of surprise",
-    descriptionLarge: "On The Witcher season 4, I contributed by integrating detailed matte paintings to extend and enhance environments, ensuring seamless blends with live-action footage. Additionally, I performed rig cleanup and worked on the reconstruction of characters, removing unwanted rigs and refining shots to maintain visual continuity and realism. This role demanded precision and a strong understanding of both compositing and character workflows within a complex VFX pipeline.",
+    descriptionSmall: "Series about Geralt Of Rivia trying to find his ward from the law of surprise",
+    descriptionLarge: {
+      type: "simple",
+      content: "On The Witcher season 4, I contributed by integrating detailed matte paintings to extend and enhance environments, ensuring seamless blends with live-action footage. Additionally, I performed rig cleanup and worked on the reconstruction of characters, removing unwanted rigs and refining shots to maintain visual continuity and realism. This role demanded precision and a strong understanding of both compositing and character workflows within a complex VFX pipeline.",
+    },
+    link: null,
   },
 ];
