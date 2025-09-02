@@ -94,7 +94,7 @@ function setProjectsPage() {
 
   for (const project of projects) {
     html += `
-      <article class="grid__item grid__item--projects ">
+      <article class="grid__item grid__item--projects fade-in">
 
         <picture class="grid__media">
           <source class="media__image" media="(max-width: 42rem)" srcset="./src/images/webp/${project.imageWeb}" type="image/webp">

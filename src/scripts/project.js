@@ -15,7 +15,7 @@ function renderPage(projectDetails) {
     return;
   }
 
-  if (projectDetails.category.toLowerCase() === "movie") {
+  if (projectDetails.category.toLowerCase() === "movie" || projectDetails.category.toLowerCase() === "series") {
     $detail.innerHTML = `
   <section class="project-details">
     <picture class="grid-details__image-wrapper vfx" id="me">

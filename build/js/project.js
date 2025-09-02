@@ -183,7 +183,7 @@ function renderPage(projectDetails) {
     $detail.innerHTML = "<p>Project not found.</p>";
     return;
   }
-  if (projectDetails.category.toLowerCase() === "movie") {
+  if (projectDetails.category.toLowerCase() === "movie" || projectDetails.category.toLowerCase() === "series") {
     $detail.innerHTML = "\n  <section class=\"project-details\">\n    <picture class=\"grid-details__image-wrapper vfx\" id=\"me\">\n      <source class=\"grid-details__image\" media=\"(max-width: 42rem)\" srcset=\"./src/images/webp/".concat(projectDetails.imageWeb, "\" type=\"image/webp\">\n      <img class=\"grid-details__image\" src=\"./src/images/").concat(projectDetails.imageJpg, "\" alt=\"my portrait\">\n    </picture>\n    <div>\n      <h2 class=\"project-details-title\">\n          ").concat(projectDetails.title, "\n      </h2>\n      <p class=\"project-details-info\">\n          ").concat(projectDetails.descriptionLarge, "\n      </p>\n    </div>\n  </section>\n  ");
   } else {
     $detail.innerHTML = "\n    <section class=\"project-details\">\n      <picture class=\"grid-details__image-wrapper\" id=\"me\">\n        <source class=\"grid-details__image\" media=\"(max-width: 42rem)\" srcset=\"./src/images/webp/".concat(projectDetails.imageWeb, "\" type=\"image/webp\">\n        <img class=\"grid-details__image\" src=\"./src/images/").concat(projectDetails.imageJpg, "\" alt=\"my portrait\">\n      </picture>\n      <div>\n        <h2 class=\"project-details-title\">\n            ").concat(projectDetails.title, "\n        </h2>\n        <p class=\"project-details-info\">\n            ").concat(projectDetails.descriptionLarge, "\n        </p>\n      </div>\n    </section>\n    ");
